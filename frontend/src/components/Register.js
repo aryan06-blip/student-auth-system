@@ -13,7 +13,7 @@ function Register() {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    const res = await axios.post("http://localhost:5000/api/register", form);
+    const res = await axios.post("https://student-auth-backend.onrender.com/api/register", form);
     alert(res.data.message);
     navigate("/login");
   };
