@@ -6,10 +6,10 @@ function Dashboard() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/dashboard", {
+    axios.get("https://student-auth-backend-0o4p.onrender.com/api/dashboard", {
       headers: { authorization: token }
     }).then(res => setStudent(res.data));
-  }, []);
+  }, [token]);
 
   const logout = () => {
     localStorage.removeItem("token");
